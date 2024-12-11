@@ -54,14 +54,34 @@
     .question-container {
       margin-bottom: 40px;
     }
+
+    .main-question-container {
+      display: block;
+    }
+
+    .sub-question-container {
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Bonus Questions</h1>
     
-    <!-- Soalan 1 -->
-    <div class="question-container">
+    <!-- Pilihan Soalan Utama -->
+    <div id="main-question" class="main-question-container">
+      <div class="question">
+        Please select a question:
+      </div>
+      <div>
+        <button class="bonus-btn" onclick="showSubQuestion(1)">Question 1: Solar System</button>
+        <button class="bonus-btn" onclick="showSubQuestion(2)">Question 2: Geography</button>
+        <button class="bonus-btn" onclick="showSubQuestion(3)">Question 3: Inventors</button>
+      </div>
+    </div>
+
+    <!-- Soalan 1: Solar System -->
+    <div id="sub-question-1" class="sub-question-container">
       <div class="question">
         What is the largest planet in our Solar System?
       </div>
@@ -73,8 +93,8 @@
       </div>
     </div>
 
-    <!-- Soalan 2 -->
-    <div class="question-container">
+    <!-- Soalan 2: Geography -->
+    <div id="sub-question-2" class="sub-question-container">
       <div class="question">
         Which country is known as the Land of the Rising Sun?
       </div>
@@ -86,8 +106,8 @@
       </div>
     </div>
 
-    <!-- Soalan 3 -->
-    <div class="question-container">
+    <!-- Soalan 3: Inventors -->
+    <div id="sub-question-3" class="sub-question-container">
       <div class="question">
         Who invented the telephone?
       </div>
@@ -98,9 +118,22 @@
         <button class="bonus-btn" onclick="checkAnswer(3, 3)">Benjamin Franklin</button>
       </div>
     </div>
+
   </div>
 
   <script>
+    // Fungsi untuk menunjukkan soalan berdasarkan pilihan
+    function showSubQuestion(questionNumber) {
+      // Sembunyikan soalan utama dan semua soalan sub
+      document.getElementById("main-question").style.display = "none";
+      document.getElementById("sub-question-1").style.display = "none";
+      document.getElementById("sub-question-2").style.display = "none";
+      document.getElementById("sub-question-3").style.display = "none";
+
+      // Tunjukkan soalan yang dipilih
+      document.getElementById("sub-question-" + questionNumber).style.display = "block";
+    }
+
     // Fungsi untuk memeriksa jawapan
     function checkAnswer(selectedIndex, correctIndex) {
       if (selectedIndex === correctIndex) {

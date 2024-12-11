@@ -99,18 +99,18 @@
       {
         question: "Kenapa kita kena tahu dan elak daripada percaya atau sebarkan berita palsu di media sosial?",
         answers: ["Sebab berita palsu boleh merosakkan hidup orang", "Sebab semua berita di media sosial betul", 
-                  " Sebab berita palsu menarik perhatian orang"],
-        correct: 1
+                  "Sebab berita palsu menarik perhatian orang"],
+        correct: 0
       },
       {
         question: "Kenapa penting sangat nak pastikan maklumat di media sosial tu betul?",
         answers: ["Untuk elak salah faham dan kesan buruk", "Untuk membuat orang percaya apa yang kita cakap", "Supaya lebih banyak orang suka"],
-        correct: 1
+        correct: 0
       },
       {
         question: "Kalau kawan kita selalu share benda tak betul, macam mana kita nak tegur dia tanpa buat dia rasa offended?",
-        answers: ["Tegur dengan sopan dan beri penjelasan", " Cakap kasar supaya dia tahu", "Abaikan je"],
-        correct: 1
+        answers: ["Tegur dengan sopan dan beri penjelasan", "Cakap kasar supaya dia tahu", "Abaikan je"],
+        correct: 0
       }
     ];
 
@@ -153,7 +153,7 @@
 
       if (selectedIndex === correctIndex) {
         // If correct
-        messageElement.textContent = ""Wah, tahniah! Korang memang awesome!" 🎉";
+        messageElement.textContent = "Wah, tahniah! Korang memang awesome! 🎉";  // Corrected message
         messageElement.style.color = "#4A8BDF";
 
         // Show the "Kembali ke Soalan" button

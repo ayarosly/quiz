@@ -50,27 +50,59 @@
       font-size: 24px;
       margin: 20px 0;
     }
+
+    .question-container {
+      margin-bottom: 40px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bonus Question</h1>
-    <div class="question">
-      What is the largest planet in our Solar System?
+    <h1>Bonus Questions</h1>
+    
+    <!-- Soalan 1 -->
+    <div class="question-container">
+      <div class="question">
+        What is the largest planet in our Solar System?
+      </div>
+      <div>
+        <button class="bonus-btn" onclick="checkAnswer(0, 2)">Earth</button>
+        <button class="bonus-btn" onclick="checkAnswer(1, 2)">Mars</button>
+        <button class="bonus-btn" onclick="checkAnswer(2, 2)">Jupiter</button>
+        <button class="bonus-btn" onclick="checkAnswer(3, 2)">Venus</button>
+      </div>
     </div>
-    <div>
-      <button class="bonus-btn" onclick="checkAnswer(0)">Earth</button>
-      <button class="bonus-btn" onclick="checkAnswer(1)">Mars</button>
-      <button class="bonus-btn" onclick="checkAnswer(2)">Jupiter</button>
-      <button class="bonus-btn" onclick="checkAnswer(3)">Venus</button>
+
+    <!-- Soalan 2 -->
+    <div class="question-container">
+      <div class="question">
+        Which country is known as the Land of the Rising Sun?
+      </div>
+      <div>
+        <button class="bonus-btn" onclick="checkAnswer(0, 1)">China</button>
+        <button class="bonus-btn" onclick="checkAnswer(1, 1)">Japan</button>
+        <button class="bonus-btn" onclick="checkAnswer(2, 1)">India</button>
+        <button class="bonus-btn" onclick="checkAnswer(3, 1)">South Korea</button>
+      </div>
+    </div>
+
+    <!-- Soalan 3 -->
+    <div class="question-container">
+      <div class="question">
+        Who invented the telephone?
+      </div>
+      <div>
+        <button class="bonus-btn" onclick="checkAnswer(0, 3)">Alexander Graham Bell</button>
+        <button class="bonus-btn" onclick="checkAnswer(1, 3)">Thomas Edison</button>
+        <button class="bonus-btn" onclick="checkAnswer(2, 3)">Nikola Tesla</button>
+        <button class="bonus-btn" onclick="checkAnswer(3, 3)">Benjamin Franklin</button>
+      </div>
     </div>
   </div>
 
   <script>
     // Fungsi untuk memeriksa jawapan
-    function checkAnswer(selectedIndex) {
-      const correctIndex = 2; // Jawapan yang betul ialah "Jupiter"
-
+    function checkAnswer(selectedIndex, correctIndex) {
       if (selectedIndex === correctIndex) {
         alert("Correct! Well done.");
         window.location.href = 'result.html'; // Halaman result

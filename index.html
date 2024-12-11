@@ -75,7 +75,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>CHOOSE THE QUESTION TO ANSWER:</h1>
+    <h1>Pilih Nombor Soalan:</h1>
     <div class="question-list">
       <button onclick="loadQuestion(0)">1</button>
       <button onclick="loadQuestion(1)">2</button>
@@ -90,7 +90,7 @@
     <div id="message"></div>
 
     <div id="backButtonContainer" style="display: none;">
-      <button class="back-btn" onclick="backToQuestionPage()">Back to Questions</button>
+      <button class="back-btn" onclick="backToQuestionPage()">Kembali Semula ke Soalan </button>
     </div>
   </div>
 
@@ -103,13 +103,13 @@
         correct: 1
       },
       {
-        question: "What is 5 + 3?",
-        answers: ["6", "7", "8", "9"],
-        correct: 2
+        question: "Kenapa penting sangat nak pastikan maklumat di media sosial tu betul?",
+        answers: ["Untuk elak salah faham dan kesan buruk", "Untuk membuat orang percaya apa yang kita cakap", "Supaya lebih banyak orang suka"],
+        correct: 1
       },
       {
-        question: "Who wrote 'The Hobbit'?",
-        answers: ["J.K. Rowling", "J.R.R. Tolkien", "George Orwell", "Mark Twain"],
+        question: "Kalau kawan kita selalu share benda tak betul, macam mana kita nak tegur dia tanpa buat dia rasa offended?",
+        answers: ["Tegur dengan sopan dan beri penjelasan", " Cakap kasar supaya dia tahu", "Abaikan je"],
         correct: 1
       }
     ];
@@ -153,10 +153,10 @@
 
       if (selectedIndex === correctIndex) {
         // If correct
-        messageElement.textContent = "CONGRATS! YOU'RE RIGHT. NOW YOUR MISSION IS COMPLETED.";
+        messageElement.textContent = ""Wah, tahniah! Korang memang awesome!" 🎉";
         messageElement.style.color = "#4A8BDF";
 
-        // Show the "Back to Questions" button
+        // Show the "Kembali ke Soalan" button
         backButtonContainer.style.display = "block";
       } else {
         // If incorrect

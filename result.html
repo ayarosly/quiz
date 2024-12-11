@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results</title>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #EFFAFD;
+      color: #4A8BDF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: 'Abril Fatface', serif;
+      color: #A0006D;
+      font-size: 36px;
+    }
+
+    .result-message {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .result-btn {
+      background-color: #4A8BDF;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .result-btn:hover {
+      background-color: #A0006D;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Your Result</h1>
+    <div class="result-message">
+      <p>Congratulations! You've completed the quiz.</p>
+      <button class="result-btn" onclick="goHome()">Go Back Home</button>
+    </div>
+  </div>
+
+  <script>
+    function goHome() {
+      window.location.href = 'quiz.html';
+    }
+  </script>
+</body>
+</html>

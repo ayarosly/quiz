@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penalty</title>
+  <!-- Tambah Google Fonts untuk Montserrat & Hind -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Hind:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif; /* Menggunakan Montserrat untuk teks umum */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #EFFAFD;
+      color: #4A8BDF;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      font-family: 'Hind', sans-serif; /* Menggunakan Hind untuk tajuk */
+      font-size: 36px;
+      color: #A0006D;
+    }
+
+    .penalty-btn {
+      background: #4A8BDF;
+      color: #FFFFFF;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background 0.3s;
+    }
+
+    .penalty-btn:hover {
+      background: #A0006D;
+    }
+
+    audio, video {
+      margin-top: 20px;
+      width: 100%; /* Membuatkan video responsif */
+      max-width: 400px; /* Menetapkan saiz maksimum video yang lebih kecil */
+      height: auto; /* Pastikan video mempunyai nisbah aspek yang betul */
+    }
+
+    .video-btn {
+      background: #4A8BDF;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background 0.3s;
+    }
+
+    .video-btn:hover {
+      background: #A0006D;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>You answered incorrectly!</h1>
+    <p>You've been penalized.</p>
+    
+    <!-- Elemen Lagu untuk Penalti -->
+  
+
+    <!-- Pilihan Video -->
+    <h2>Choose your penalty video:</h2>
+    <div>
+      <button class="video-btn" onclick="playVideo('video1')">Video 1: Relaxing Tunes</button>
+      <button class="video-btn" onclick="playVideo('video2')">Video 2: Energetic Vibes</button>
+      <button class="video-btn" onclick="playVideo('video3')">Video 3: Calm Down Music</button>
+    </div>
+
+    <!-- Video untuk setiap pilihan -->
+    <div class="video-container">
+      <video id="video1" controls style="display:none;">
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video id="video2" controls style="display:none;">
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video id="video3" controls style="display:none;">
+        <source src="video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Butang untuk navigasi ke soalan bonus atau kembali ke soalan -->
+    <div>
+      <button class="penalty-btn" onclick="window.location.href='bonus.html'">Go to Bonus Question</button>
+      <button class="penalty-btn" onclick="window.location.href='index.html'">Back to Quiz</button>
+    </div>
+  </div>
+
+  <script>
+    // Fungsi untuk hentikan lagu bila pengguna mahu
+    const audioElement = document.getElementById('penalty-audio');
+    audioElement.onended = function() {
+      // Automatikkan untuk hentikan lagu apabila tamat
+      audioElement.pause();
+    }
+
+    // Fungsi untuk memainkan video berdasarkan pilihan
+    function playVideo(videoId) {
+      // Sembunyikan semua video
+      document.getElementById('video1').style.display = 'none';
+      document.getElementById('video2').style.display = 'none';
+      document.getElementById('video3').style.display = 'none';
+
+      // Tunjukkan video yang dipilih
+      document.getElementById(videoId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

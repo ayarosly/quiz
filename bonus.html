@@ -71,51 +71,49 @@
     <!-- Pilihan Soalan Utama -->
     <div id="main-question" class="main-question-container">
       <div class="question">
-        Please select a question:
+       Sila Pilih Soalan : 
       </div>
       <div>
-        <button class="bonus-btn" onclick="showSubQuestion(1)">Question 1: Solar System</button>
-        <button class="bonus-btn" onclick="showSubQuestion(2)">Question 2: Geography</button>
-        <button class="bonus-btn" onclick="showSubQuestion(3)">Question 3: Inventors</button>
+        <button class="bonus-btn" onclick="showSubQuestion(1)">Question 1 </button>
+        <button class="bonus-btn" onclick="showSubQuestion(2)">Question 2 </button>
+        <button class="bonus-btn" onclick="showSubQuestion(3)">Question 3 </button>
       </div>
     </div>
 
-    <!-- Soalan 1: Solar System -->
+    <!-- Soalan 1 -->
     <div id="sub-question-1" class="sub-question-container">
       <div class="question">
-        What is the largest planet in our Solar System?
+       Apa yang korang boleh buat untuk jaga diri dan kekal selamat bila guna media sosial?
       </div>
       <div>
-        <button class="bonus-btn" onclick="checkAnswer(0, 2)">Earth</button>
-        <button class="bonus-btn" onclick="checkAnswer(1, 2)">Mars</button>
-        <button class="bonus-btn" onclick="checkAnswer(2, 2)">Jupiter</button>
-        <button class="bonus-btn" onclick="checkAnswer(3, 2)">Venus</button>
+        <button class="bonus-btn" onclick="checkAnswer(0, 2)">Share semua benda yang kita tahu</button>
+        <button class="bonus-btn" onclick="checkAnswer(1, 2)">Gunakan setting privasi dan hati-hati</button>
+        <button class="bonus-btn" onclick="checkAnswer(2, 2)">Jangan guna media sosial</button>
       </div>
     </div>
 
-    <!-- Soalan 2: Geography -->
+    <!-- Soalan 2 -->
     <div id="sub-question-2" class="sub-question-container">
       <div class="question">
-        Which country is known as the Land of the Rising Sun?
+      Macam mana nak tahu sesuatu berita tu betul atau palsu? Ada tak cara mudah nak cek?
       </div>
       <div>
-        <button class="bonus-btn" onclick="checkAnswer(0, 1)">China</button>
-        <button class="bonus-btn" onclick="checkAnswer(1, 1)">Japan</button>
-        <button class="bonus-btn" onclick="checkAnswer(2, 1)">India</button>
-        <button class="bonus-btn" onclick="checkAnswer(3, 1)">South Korea</button>
+        <button class="bonus-btn" onclick="checkAnswer(0, 1)">Percaya apa yang ramai share</button>
+        <button class="bonus-btn" onclick="checkAnswer(1, 1)">Cek sumber dan periksa fakta</button>
+        <button class="bonus-btn" onclick="checkAnswer(2, 1)">Tengok berapa banyak like</button>
       </div>
     </div>
 
-    <!-- Soalan 3: Inventors -->
+    <!-- Soalan 3: -->
     <div id="sub-question-3" class="sub-question-container">
       <div class="question">
-        Who invented the telephone?
+       Kenapa berita palsu ni laju betul tersebar dekat media sosial? Apa yang buat orang mudah percaya?
       </div>
       <div>
-        <button class="bonus-btn" onclick="checkAnswer(0, 3)">Alexander Graham Bell</button>
-        <button class="bonus-btn" onclick="checkAnswer(1, 3)">Thomas Edison</button>
-        <button class="bonus-btn" onclick="checkAnswer(2, 3)">Nikola Tesla</button>
-        <button class="bonus-btn" onclick="checkAnswer(3, 3)">Benjamin Franklin</button>
+        <button class="bonus-btn" onclick="checkAnswer(0, 3)">Berita palsu biasanya penuh dengan drama dan emosi</button>
+        <button class="bonus-btn" onclick="checkAnswer(1, 3)">Berita palsu selalu datang dari sumber rasmi</button>
+        <button class="bonus-btn" onclick="checkAnswer(2, 3)">Cerita panjang memang best, ramai suka</button>
+      </div>
       </div>
     </div>
 
@@ -134,14 +132,12 @@
       document.getElementById("sub-question-" + questionNumber).style.display = "block";
     }
 
-    // Fungsi untuk memeriksa jawapan
+    // Fungsi untuk memeriksa jawapan dan teruskan ke halaman seterusnya tanpa notifikasi
     function checkAnswer(selectedIndex, correctIndex) {
       if (selectedIndex === correctIndex) {
-        alert("Correct! Well done.");
-        window.location.href = 'result.html'; // Halaman result
+        window.location.href = 'result.html'; // Halaman result jika jawapan betul
       } else {
-        alert("Incorrect! You've been penalized.");
-        window.location.href = 'penalty.html'; // Halaman penalti
+        window.location.href = 'penalty.html'; // Halaman penalti jika jawapan salah
       }
     }
   </script>

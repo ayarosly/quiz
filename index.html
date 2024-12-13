@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Hind:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Hind', sans-serif; /* Updated to Hind */
+      font-family: 'Hind', sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
@@ -24,20 +24,20 @@
     }
 
     h1 {
-      font-family: 'Montserrat', sans-serif; /* Updated to Montserrat */
-      font-size: 36px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 48px; /* Increased font size */
       color: #A0006D;
     }
 
     .question-list button {
       background: #4A8BDF;
       color: #FFFFFF;
-      padding: 15px 30px;
+      padding: 18px 36px; /* Increased padding */
       border: none;
-      border-radius: 5px;
-      font-size: 18px;
+      border-radius: 8px; /* Slightly rounded */
+      font-size: 22px; /* Increased font size */
       cursor: pointer;
-      margin: 10px;
+      margin: 15px;
       transition: background 0.3s;
     }
 
@@ -46,12 +46,12 @@
     }
 
     .question {
-      font-size: 24px;
-      margin: 20px 0;
+      font-size: 28px; /* Increased font size */
+      margin: 30px 0;
     }
 
     #message {
-      font-size: 24px;
+      font-size: 28px; /* Increased font size */
       color: #A0006D;
       margin-top: 20px;
     }
@@ -59,12 +59,12 @@
     .back-btn {
       background: #A0006D;
       color: #FFFFFF;
-      padding: 15px 30px;
+      padding: 18px 36px; /* Increased padding */
       border: none;
-      border-radius: 5px;
-      font-size: 18px;
+      border-radius: 8px; /* Slightly rounded */
+      font-size: 22px; /* Increased font size */
       cursor: pointer;
-      margin: 10px;
+      margin: 15px;
       transition: background 0.3s;
     }
 
@@ -73,15 +73,14 @@
     }
 
     .checkpoint {
-      font-size: 18px;
+      font-size: 22px; /* Increased font size */
       color: #A0006D;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Added the checkpoint message above the heading -->
     <p class="checkpoint">Checkpoint 5 - Bola Lidi</p>
     
     <h1>Pilih Nombor Soalan:</h1>
@@ -129,12 +128,10 @@
       const messageElement = document.getElementById("message");
       const backButtonContainer = document.getElementById("backButtonContainer");
 
-      // Reset message and answers
       messageElement.textContent = "";
       answersElement.innerHTML = "";
-      backButtonContainer.style.display = "none"; // Hide back button initially
+      backButtonContainer.style.display = "none";
 
-      // Load the selected question
       const selectedQuestion = questions[index];
       questionElement.textContent = selectedQuestion.question;
 
@@ -144,10 +141,10 @@
         button.onclick = () => checkAnswer(i, selectedQuestion.correct);
         button.style.background = "#4A8BDF";
         button.style.color = "#FFFFFF";
-        button.style.padding = "10px 20px";
+        button.style.padding = "15px 30px"; /* Increased padding */
         button.style.border = "none";
-        button.style.borderRadius = "5px";
-        button.style.margin = "5px";
+        button.style.borderRadius = "8px"; /* Slightly rounded */
+        button.style.margin = "12px"; /* Increased margin */
         button.style.cursor = "pointer";
         button.style.transition = "background 0.3s";
         button.onmouseover = () => (button.style.background = "#A0006D");
@@ -161,14 +158,11 @@
       const backButtonContainer = document.getElementById("backButtonContainer");
 
       if (selectedIndex === correctIndex) {
-        // If correct
-        messageElement.textContent = "Wah, tahniah! Korang memang awesome! 🎉";  // Corrected message
+        messageElement.textContent = "Wah, tahniah! Korang memang awesome! 🎉";
         messageElement.style.color = "#4A8BDF";
 
-        // Show the "Kembali ke Soalan" button
         backButtonContainer.style.display = "block";
       } else {
-        // If incorrect
         window.location.href = 'penalty.html'; // Redirect to penalty page
       }
     }

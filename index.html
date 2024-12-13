@@ -46,12 +46,12 @@
     }
 
     .question {
-      font-size: 36px; /* Increased font size for question text */
+      font-size: 30px; /* Increased font size for question text */
       margin: 40px 0; /* Increased margin for spacing */
     }
 
     #message {
-      font-size: 28px; /* Increased font size */
+      font-size: 26px; /* Increased font size */
       color: #A0006D;
       margin-top: 20px;
     }
@@ -73,7 +73,7 @@
     }
 
     .checkpoint {
-      font-size: 22px; /* Increased font size */
+      font-size: 50px; /* Increased font size */
       color: #A0006D;
       margin-bottom: 30px;
     }
@@ -102,7 +102,7 @@
     </div>
   </div>
 
-  <script>
+<script>
     const questions = [
       {
         question: "Kenapa kita kena tahu dan elak daripada percaya atau sebarkan berita palsu di media sosial?",
@@ -149,6 +149,7 @@
         button.style.transition = "background 0.3s";
         button.onmouseover = () => (button.style.background = "#A0006D");
         button.onmouseout = () => (button.style.background = "#4A8BDF");
+        button.style.fontSize = "24px";  /* Increased font size */
         answersElement.appendChild(button);
       });
     }
@@ -170,6 +171,9 @@
     function backToQuestionPage() {
       window.location.href = 'index.html'; // Redirect back to the quiz page
     }
-  </script>
+</script>
+
+
+
 </body>
 </html>
